@@ -1,0 +1,23 @@
+{
+  "name": "art-casting",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/timdancan/ArtCasting.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/timdancan/ArtCasting/issues"
+  },
+  "homepage": "https://github.com/timdancan/ArtCasting#readme",
+  "dependencies": {
+    "ion-rangeslider": "^2.3.1",
+    "tiny-slider": "^2.9.3"
+  }
+}

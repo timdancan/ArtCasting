@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/tiny-slider.css">
   <link rel="stylesheet" href="./css/index.min.css">
   <title>ArtCasting</title>
 </head>
@@ -13,11 +14,13 @@
     <div class="container">
       <div class="header__wrapper">
         <div class="header__logo-container">
+          <button class="header__icon header__icon_menu page-link"></button>
           <a href="#"><img class="logo logo_header page-link" src="./images/logo.svg" alt="Лого"></a>
           <div class="header__buttons">
-            <button class="button page-link">купить gold аккаунт</button>
-            <button class="button button_alternative page-link">создать кастинг/объявление</button>
+            <button class="button">купить gold аккаунт</button>
+            <button class="button button_alternative">создать кастинг/объявление</button>
           </div>
+          <button class="header__icon header__icon_account page-link"></button>
         </div>
         <div class="header__autorization">
           <a class="header__sign page-link" href="#">вход</a>
@@ -38,25 +41,183 @@
   <section class="filter">
     <div class="container">
       <form class="filter__form">
-        <select class="filter__list">
-          <option class="filter__item">Кастинг</option>
-        </select>
-        <select class="filter__list">
-          <option class="filter__item">Пол</option>
-        </select>
+        <div class="select-casting">
+          <div class="select__header">
+            <p class="select__current">Кастинг</p>
+          </div>
+        
+          <div class="select__body">
+            <p class="select__item">Value 1</p>
+            <p class="select__item">Value 2</p>
+          </div>
+        </div>
+        <div class="select-gander">
+          <div class="select__header">
+            <p class="select__current">Пол</p>
+          </div>
+        
+          <div class="select__body">
+            <p class="select__item">Мужской</p>
+            <p class="select__item">Женский</p>
+          </div>
+        </div>
         <label class="filter__label">
           <input class="filter__input" type="search" placeholder="Ключевая фраза">
           <img class="filter__search" src="./images/search.svg" alt="Поиск">
         </label>
-        <select class="filter__list">
-          <option class="filter__item">Возраст</option>
-        </select>
-        <button class="button button_alternative button_place_filter page-link" type="button"><img class="filter__button-icon" src="./images/options.svg" alt="Фильтры"> Еще фильтры</button>
-        <button class="button page-link" type="submit">Найти</button>
+        <div class="select-age">
+          <div class="select__header">
+            <p class="select__current">Возраст</p>
+          </div>
+        
+          <div class="select__body">
+            <div class="middle select__item">
+              <div class="multi-range-slider">
+                <input type="range" id="input-left" min="0" max="100" value="25">
+                <input type="range" id="input-right" min="0" max="100" value="75">
+            
+                <div class="slider">
+                  <div class="track"></div>
+                  <div class="range"></div>
+                  <div class="thumb left"></div>
+                  <div class="thumb right"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="button button_alternative button_place_filter" type="button"><img class="filter__button-icon" src="./images/options.svg" alt="Фильтры"> Еще фильтры</button>
+        <button class="button" type="submit">Найти</button>
       </form>
     </div>
   </section>
 
+  <section class="casting-slider">
+    <div class="casting-slider__container">
+      <article class="casting-slides fade">
+        <div class="casting-slides__main-content">
+          <img class="casting-slides__img" src="./images/main_photo.svg" alt="">
+          <div class="casting-slides__content">
+            <h1 class="casting-slides__title">ARTcasting</h1>
+            <p class="casting-slides__subtitle">Это самый удобный, интуитивный сервис кастингов в рунете</p>
+            <button class="button button_place_casting-slider">найти кастинг</button>
+          </div>
+        </div>
+      </article>
+    
+      <div class="casting-slides fade">
+
+      </div>
+    
+      <div class="casting-slides fade">
+
+      </div>
+    
+      <a class="prev" onclick="plusSlides(-1)"></a>
+      <a class="next" onclick="plusSlides(1)"></a>
+
+      <div class="casting-slider__dots">
+        <span class="casting-slider__dot" onclick="currentSlide(1)"></span> 
+        <span class="casting-slider__dot" onclick="currentSlide(2)"></span> 
+        <span class="casting-slider__dot" onclick="currentSlide(3)"></span> 
+      </div>
+    </div>
+    <br>
+  </section>
+
+  <section class="people">
+    <div class="container">
+      <h2 class="people__title">Кастинги и массовки в Москве</h2>
+      <div class="people__buttons">
+        <button class="arrow-button arrow-button_left page-link"></button>
+        <button class="arrow-button arrow-button_right page-link"></button>
+      </div>
+        <div class="people__slider">
+          <article class="people__item">
+            <img src="./images/photo-1.jpg" alt="" class="people__photo">
+            <div class="people__content">
+              <h4 class="people__name">Холмогорова Ирина Валентиновна</h4>
+              <p class="people__proffesion">Актер, Вокалист, Ведущий</p>
+              <p class="people__age">26 лет</p>
+            </div>
+          </article>
+          <article class="people__item">
+            <img src="./images/photo_2.jpg" alt="" class="people__photo">
+            <div class="people__content">
+              <h4 class="people__name">Смирнов Роман</h4>
+              <p class="people__proffesion">Актер, Вокалист, Ведущий</p>
+              <p class="people__age">19 лет</p>
+            </div>    
+          </article>
+          <article class="people__item">
+            <img src="./images/photo_3.jpg" alt="" class="people__photo">
+            <div class="people__content">
+              <h4 class="people__name">Дюмина Марина Викторовна</h4>
+              <p class="people__proffesion">Актер, Вокалист, Ведущий</p>
+              <p class="people__age">32 года</p>
+            </div> 
+          </article>
+          <article class="people__item">
+            <img src="./images/photo_4.jpg" alt="" class="people__photo">
+            <div class="people__content">
+              <h4 class="people__name">Холмогорова Ирина Валентиновна</h4>
+              <p class="people__proffesion">Актер, Вокалист, Ведущий</p>
+              <p class="people__age">32 года</p>
+            </div>  
+          </article>
+          <article class="people__item">
+            <img src="./images/photo_5.jpg" alt="" class="people__photo">
+            <div class="people__content">
+              <h4 class="people__name">Воронин Сергей</h4>
+              <p class="people__proffesion">Актер, Вокалист, Ведущий</p>
+              <p class="people__age">28 лет</p>
+            </div> 
+          </article>
+          <div class="people__item people__add-item">
+            <button class="button-add page-link"></button>
+            <h4 class="people__add-title">Добавить анкету</h4>
+          </div>
+          <article class="people__item">
+            <img src="./images/photo_3.jpg" alt="" class="people__photo">
+            <div class="people__content">
+              <h4 class="people__name">Воронин Сергей</h4>
+              <p class="people__proffesion">Актер, Вокалист, Ведущий</p>
+              <p class="people__age">28 лет</p>
+            </div>
+          </article>
+        </div>
+    </div>
+  </section>
+
+  <div class="popup ">
+    <div class="container">
+      <div class="header__logo-container header__logo-container_active">
+        <button class="header__icon header__icon_menu_active page-link"></button>
+        <a href="#"><img class="logo logo_header page-link" src="./images/logo_popup.svg" alt="Лого"></a>
+        <button class="header__icon header__icon_account page-link"></button>
+      </div>
+      <ul class="popup__menu">
+        <li class="popup__item"><a class="popup__link page-link" href="#">о нас</a></li>
+        <li class="popup__item"><a class="popup__link page-link" href="#">соискатели</a></li>
+        <li class="popup__item"><a class="popup__link page-link" href="#">наниматели</a></li>
+        <li class="popup__item"><a class="popup__link page-link" href="#">кастинги</a></li>
+        <li class="popup__item"><a class="popup__link page-link" href="#">календарь кастингов</a></li>
+      </ul>
+      <div class="header__buttons header__buttons_place_popup">
+        <button class="button">купить gold аккаунт</button>
+        <button class="button button_alternative button_place_popup">создать кастинг/объявление</button>
+      </div>
+      <div class="popup__icons">
+        <a href="#" class="popup__icon"><img src="./images/icon_odnoclassniki.svg" alt="одноклассники"></a>
+        <a href="#" class="popup__icon"><img src="./images/icon_facebook.svg" alt="фэйсбук"></a>
+        <a href="#" class="popup__icon"><img src="./images/icon_vk.svg" alt="вк"></a>
+        <a href="#" class="popup__icon"><img src="./images/icon_twitter.svg" alt="твиттер"></a>
+        <a href="#" class="popup__icon"><img src="./images/icon_instagram.svg" alt="интсаграм"></a>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
   <script src="./scripts/scripts.js"></script>
 </body>
 </html>
